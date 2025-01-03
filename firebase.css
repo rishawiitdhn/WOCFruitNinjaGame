@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"poppins",sans-serif;
+}
+body{
+    background-color: #c9d6ff;
+    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin-top: 5%;
+    padding: 1.5rem;
+    border: 1px solid rgb(29, 23, 23);
+    border-radius: 10px;
+    width:450px;
+    background-color: white;
+    box-shadow: 0 20px 35px rgba(0,0,1,0.9); 
+   
+}
+.inputSignUp{
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 80%;
+    
+}
+.inputSignIn{
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 80%;
+    
+}
+
+h2{
+    text-align: center;
+}
+.submit{
+    font-size:1.1rem;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background:rgb(125,125,235);
+    color:white;
+    cursor:pointer;
+    transition:0.9s;
+    margin-top: 2rem;
+}
+.submit:hover {
+    background:rgb(2, 2, 20);
+}
+input{
+    border: none;
+    outline:transparent;
+    border-bottom: 1px solid rgb(71, 62, 62);
+    font-weight: 100;
+    font-size: large;
+}
+#or{
+    text-align: center;
+    color: black;
+    margin-top: 0.7rem;
+}
+#footer{
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 20%;
+    font-weight: bold;
+}
+.switch{
+    border: none;
+    background-color: white;
+    color: rgb(125,125,235);
+    height: 2rem;
+    font-size:1rem;
+    padding:8px 0;
+    font-weight: bold;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.switch:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.messageDiv{
+    background-color: hsl(327,90%,28%);
+    color:white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}
