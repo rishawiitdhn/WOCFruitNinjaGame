@@ -522,4 +522,36 @@ window.requestAnimationFrame(animate);
 }
 animate();
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import {getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
+const firebaseConfig = {
+    apiKey: "AIzaSyAgfisfCjUQuLekqjfdvRx8w9Qh4DyfD0E",
+    authDomain: "fruit-ninja-game-6adad.firebaseapp.com",
+    projectId: "fruit-ninja-game-6adad",
+    storageBucket: "fruit-ninja-game-6adad.firebasestorage.app",
+    messagingSenderId: "48500241643",
+    appId: "1:48500241643:web:6ccd37d7cf591eb0087aae"
+  };
+  
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+const auth = getAuth();
+  const db = getFirestore();
+
+  const logoutButton = document.getElementById('logOut');
+  
+  logoutButton.addEventListener('click', (event) => {
+    localStorage.removeItem('loggedInUserId');
+    signOut(auth)
+    .then(() => {
+      window.location.href = "index.html";
+    })
+    .catch((error) => {
+      console.log("error signing out: ", error);
+    })
+  })
